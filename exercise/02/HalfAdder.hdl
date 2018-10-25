@@ -14,4 +14,10 @@ CHIP HalfAdder {
 
     PARTS:
     // Put you code here:
+    Not(in=a, out=nota);
+    Not(in=b, out=notb);
+    And(a=a, b=notb, out=aAndnb);
+    And(a=nota, b=b, out=naAndb);
+    Or(a=aAndnb, b=naAndb, out=sum);
+    And(a=a, b=b, out=carry);
 }
